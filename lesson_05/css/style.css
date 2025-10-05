@@ -1,0 +1,116 @@
+/* скидання стилів */
+@import url("reset.css");
+
+/* Локальне підключення шрифту */
+
+@import url("fonts.css");
+
+/* підключення шрифтів */
+/* lato*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+body {
+    width: 1705px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+}
+
+header {
+    margin: 30px;
+    color: #b6f009;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+
+.content {
+    margin: 0 auto;
+}
+
+.title_1 {
+    color: #2f302c;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 82px;
+    margin-bottom: 72px;
+
+}
+
+
+.section {
+    margin: 72px auto 82px;
+    max-width: 1180px;
+    text-align: center;
+
+
+}
+
+.section_1,
+.section_2 {
+    font-size: 0;
+    margin-left: -34px;
+    margin-right: -34px;
+}
+
+.section_1 {
+    margin-bottom: 68px;
+}
+
+.section_2 {
+    margin-bottom: 82px;
+}
+
+
+.item {
+    display: inline-block;
+    width: 33.33%;
+    height: 208px;
+    vertical-align: top;
+    padding-left: 34px;
+    padding-right: 34px;
+
+}
+
+
+.section_blok_1,
+.section_blok_2,
+.section_blok_3 {
+    font-size: 20px;
+
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+}
+
+.title {
+    color: #2f302c;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 24px;
+}
+
+.text {
+    color: #7e7f7c;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+footer {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    color: brown;
+}
