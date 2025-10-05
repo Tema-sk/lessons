@@ -1,18 +1,17 @@
 /* скидання стилів */
 @import url("reset.css");
 
-/* Локальне підключення шрифту */
+/* Локальне підключення шрифту lato 500 800 */
 
 @import url("fonts.css");
 
-/* підключення шрифтів */
-/* lato*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
 
 body {
-    width: 1705px;
+    max-width: 1705px;
     font-family: "Lato", sans-serif;
     font-weight: 500;
+    font-size: 16px;
 }
 
 header {
@@ -68,7 +67,7 @@ header {
 .item {
     display: inline-block;
     width: 33.33%;
-    height: 208px;
+    max-height: 208px;
     vertical-align: top;
     padding-left: 34px;
     padding-right: 34px;
@@ -90,21 +89,22 @@ header {
 
 .title {
     color: #2f302c;
-    font-size: 16px;
+    /* font-size: 16px; */
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1.25;
     text-transform: uppercase;
     text-align: center;
-    margin: 24px;
+    margin: 24px 0;
 }
 
 .text {
     color: #7e7f7c;
-    font-size: 16px;
+    /* font-size: 16px; */
     font-style: normal;
-    line-height: 20px;
+    line-height: 1.25;
     letter-spacing: 0;
     text-transform: none;
+
 }
 
 footer {
