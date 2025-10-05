@@ -67,7 +67,6 @@ header {
 .item {
     display: inline-block;
     width: 33.33%;
-    max-height: 208px;
     vertical-align: top;
     padding-left: 34px;
     padding-right: 34px;
