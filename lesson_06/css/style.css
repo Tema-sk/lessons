@@ -10,14 +10,12 @@
     background-image: url("../img/Hero_banner.png");
     background-repeat: no-repeat;
     min-height: 609px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
+    font-family: "Lato", sans-serif;
     position: relative;
     margin-bottom: 100px;
     background-size: cover;
-
-
-
+    padding-top: 114px;
+    padding-bottom: 110px;
 }
 
 .hero_container {
@@ -30,7 +28,6 @@
 
 .hero_content {
     max-width: 640px;
-    padding-top: 114px;
     margin: 0 0 0 auto;
 
 }
@@ -42,31 +39,20 @@
     font-size: 96px;
     font-style: normal;
     font-family: "Montserrat", sans-serif;
+    font-weight: 800;
     line-height: 1.04;
     text-transform: uppercase;
     margin-bottom: 16px;
-
-
 }
 
-
-
-.hero_title_title {
-    font-family: "Montserrat", sans-serif;
+.hero_title span {
     font-weight: 700;
-    /* font-size: 96px; */
-    /* display: inline-block;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: #000000;
-    width: 308px; */
-
 }
+
 
 .content_title {
     color: #2f302c;
     font-size: 20px;
-    font-family: "Lato", sans-serif;
     font-weight: 700;
     line-height: 1.4;
     letter-spacing: 0;
@@ -86,9 +72,8 @@
 .content_text {
     max-width: 340px;
     color: #7e7f7c;
-    font-size: 16px;
+    /* font-size: 16px; */
     font-style: normal;
-    font-family: "Lato", sans-serif;
     font-weight: 500;
     line-height: 1.25;
     text-transform: none
@@ -108,7 +93,7 @@
 .list {
     max-width: 351px;
     max-height: 626px;
-    margin-left: 40px;
+
 }
 
 .item_green {
@@ -193,6 +178,7 @@
     width: 1200px;
     height: 200px;
     margin-left: 20px;
+    margin-bottom: 100px;
     border-radius: 25px;
     outline: 10px double #d4250e;
     text-align: center;
