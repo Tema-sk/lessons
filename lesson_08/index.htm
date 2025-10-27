@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- шрифти-->
+    <!-- lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <!-- Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open%20Sans:wght@700&display=swap" rel="stylesheet">
+    <!-- стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>lesson 8</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h2>Домашня робота по уроку 8</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="vector">
+            <h3>
+                Векторна web графіка
+            </h3>
+            <P>
+                Для векторних зображень лише один формат - SVG
+            </P>
+            <div class="vector_img">
+                <img src="img/Group.svg" alt="Зафарбоване коло в колі">
+                <img src="img/right-arrow.svg" alt="Стрілка праворуч">
+            </div>
+        </div>
+
+        <div class="pixel">
+            <h3>
+                Растрова web графіка
+            </h3>
+            <p>
+                Для растрових зображень основні формати - JPEG/JPG, PNG, WEBP, AVIF.
+            </p>
+            <div class="decor">
+                <div class="decor_left item">
+                    <div class="container">
+                        <p>Елемент декору ліворуч, PNG 1x, 2x, 3x ~ WEBP 1x,2x,
+                            3x / AVIF 1x, 2x, 3x</p>
+                        <picture>
+                            <source srcset="img/1_image_1x.avif 1x, img/1_image_2x.avif 2x, img/1_image_3x.avif 3x"
+                                type="image/avif">
+                            <source srcset="img/1_image_1x.webp 1x, img/1_image_1.webp 2x, img/1_image_1.webp 3x"
+                                type="image/webp">
+                            <img src="img/1_image_1x.png" alt="Декоративний елемент праворуч">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="decor_right item">
+                    <div class="container">
+                        <p>Елемент декору праворуч, PNG 1x, 2x, 3x ~ WEBP 1x,2x,
+                            3x / AVIF 1x, 2x, 3x</p>
+                        <picture>
+                            <source srcset="img/2_image_1x.avif 1x, img/2_image_2x.avif 2x, img/3_image_3x.avif 3x"
+                                type="image/avif">
+                            <source srcset="img/2_image_1x.webp 1x, img/2_image_1.webp 2x, img/2_image_1.webp 3x"
+                                type="image/webp">
+                            <img src="img/2_image_1x.png" alt="Декоративний елемент праворуч">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="pictures">
+                <div class="items">
+                    <div class="item">
+                        <div class="container">
+                            <p> Фото дівчини в позі голуба, JPG 1x, 2x, 3x ~ WEBP 1x,2x,
+                                3x / AVIF 1x, 2x, 3x</p>
+                            <picture>
+                                <source srcset="img/dove_1x.avif 1x, img/dove_2x.avif 2x, img/dove_3x.avif 3x"
+                                    type="image/avif">
+                                <source srcset="img/dove_1x.webp 1x, img/dove_2x.webp 2x, img/dove_3x.webp 3x"
+                                    type="image/webp">
+                                <img src="img/dove_1x.jpg" alt="Фото дівчини в позі голуба">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container">
+                            <p> Фото дівчини в позі лотоса, JPG 1x, 2x, 3x ~ WEBP 1x,2x,
+                                3x / AVIF 1x, 2x, 3x</p>
+                            <picture>
+                                <source srcset="img/lotus_1x.avif 1x, img/lotus_2x.avif 2x, img/lotus_3x.avif 3x"
+                                    type="image/avif">
+                                <source srcset="img/lotus_1x.webp 1x, img/lotus_2x.webp 2x, img/lotus_3x.webp 3x"
+                                    type="image/webp">
+                                <img src="img/lotus_1x.jpg" alt="Фото дівчини в позі лотоса">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container">
+                            <p> Фото дівчини в позі вішну, JPG 1x, 2x, 3x ~ WEBP 1x,2x,
+                                3x / AVIF 1x, 2x, 3x</p>
+                            <picture>
+                                <source
+                                    srcset="img/dhanurasana.avif 1x, img/dhanurasana_2x.avif 2x, img/dhanurasana_3x.avif 3x"
+                                    type="image/avif">
+                                <source
+                                    srcset="img/dhanurasana.webp 1x, img/dhanurasana_2x.webp 2x, img/dhanurasana_3x.webp 3x"
+                                    type="image/webp">
+                                <img src="img/dhanurasana.jpg" alt="Фото дівчини в позі вішну">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container">
+                            <p> Фото дівчини в позі Вирабхадрасана, JPG 1x, 2x, 3x ~ WEBP 1x,2x,
+                                3x / AVIF 1x, 2x, 3x</p>
+                            <picture>
+                                <source
+                                    srcset="img/Virabhadrasana.avif 1x, img/Virabhadrasana_2x.avif 2x, img/Virabhadrasana_3x.avif 3x"
+                                    type="image/avif">
+                                <source
+                                    srcset="img/Virabhadrasana.webp 1x, img/Virabhadrasana_2x.webp 2x, img/Virabhadrasana_3x.webp 3x"
+                                    type="image/webp">
+                                <img src="img/Virabhadrasana.jpg" alt="Фото дівчини в позі Вирабхадрасана">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container">
+                            <p> Фото дівчини в позі півмісяця, JPG 1x, 2x, 3x ~ WEBP 1x,2x,
+                                3x / AVIF 1x, 2x, 3x</p>
+                            <picture>
+                                <source srcset="img/ardha.avif 1x, img/ardha_2x.avif 2x, img/ardha_3x.avif 3x"
+                                    type="image/avif">
+                                <source srcset="img/ardha.webp 1x, img/ardha_2x.webp 2x, img/ardha_3x.webp 3x"
+                                    type="image/webp">
+                                <img src="img/ardha.jpg" alt="Фото дівчини в позі півмісяця">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div>
+            <P>
+                Типу
+            </P>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
