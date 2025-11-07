@@ -1,0 +1,301 @@
+/* скидання стилів */
+@import url("reset.css");
+
+/* Локальне підключення шрифту */
+
+@import url("fonts.css");
+
+/* Шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap');
+
+
+/* menu */
+
+.header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #7a956b;
+    text-align: center;
+    padding-top: 18px;
+
+}
+
+.header__title {
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #c73838;
+    margin-bottom: 25px;
+}
+
+
+.menu__list {
+    font-size: 0;
+}
+
+.menu__item {
+    position: relative;
+    display: inline-block;
+}
+
+.menu__item:hover .menu__link {
+    background-color: #77608d;
+}
+
+.menu__item:hover .menu__submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu__item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.menu__link {
+    font-size: 30px;
+    padding: 5px;
+
+}
+
+.menu__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #77608d;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.submenu {
+    width: 200px;
+    padding: 10px;
+}
+
+.submenu__item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.submenu__link {
+    font-size: 18px;
+}
+
+.submenu__link:hover {
+    text-decoration: underline;
+}
+
+
+/* Face */
+.face {
+    padding: 46px 0;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+
+}
+
+.face__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* background: #06d45c; */
+}
+
+.face__text {
+    font-size: 20px;
+    margin-bottom: 48px;
+    line-height: normal;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.face__items {
+    text-align: center;
+    /* Центрує inline-block елементи всередині */
+    font-size: 0;
+    /* Видаляємо пробіли між inline-block елементами */
+    margin: 0 -61.5px 77px;
+    /* Мінусовий відступ для компенсації відступів карток та вниз до кнопки */
+}
+
+.face__item {
+    /* 1. РОЗТАШУВАННЯ: Робить картку inline-block, щоб вони стали в ряд */
+    display: inline-block;
+
+    /* 2. РОЗМІР: Встановлюємо ширину кожної картки */
+    width: 33.333%;
+    padding: 0 61.5px;
+    /* Внутрішній відступ між картками */
+
+    /* 3. ПОЗИЦІОНУВАННЯ: Встановлюємо КОНТЕКСТ для абсолютно позиціонованого тексту */
+    position: relative;
+    font-size: 16px;
+}
+
+.item-face__image {
+    width: 251px;
+    height: 315px;
+}
+
+.item-face__title,
+.item-face__link {
+    /* 1. ПОЗИЦІОНУВАННЯ: Абсолютно відносно .face__item */
+    position: absolute;
+    width: 100%;
+    /* Займаємо всю ширину батьківського елемента */
+    text-align: center;
+    padding: 0 30px;
+}
+
+.item-face__title {
+    /* Розміщення: трохи нижче центру */
+    top: 48%;
+    left: 0;
+}
+
+.item-face__title h3 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+
+}
+
+.item-face__link {
+    /* Розміщення: ближче до низу */
+    bottom: 4%;
+    left: 0;
+}
+
+.item-face__link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    display: inline-block;
+    line-height: normal;
+    text-transform: none;
+
+}
+
+.face__button a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    padding: 10px 50px;
+    border: 1px solid #333;
+    font-size: 14px;
+}
+
+.face__button a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* lesson */
+
+.position {
+    background: #77608d;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 1500px;
+}
+
+.position__relative {
+    min-height: 100px;
+    background: #06d45c;
+    text-align: center;
+    color: #c73838;
+    font-size: 20px;
+    padding-top: 50px;
+
+}
+
+.position__relative:hover {
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+
+}
+
+.position__absolute {
+    background: #0a0de0;
+    text-align: center;
+    color: #2fe70a;
+    font-size: 20px;
+}
+
+.position__absolute:hover {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: 3;
+}
+
+.position__sticky {
+    position: sticky;
+    /* Встановлює липке позиціонування */
+    top: 50px;
+    /* Точка прилипання: 50px від верхнього краю VP */
+    z-index: 2;
+    /* Гарантує, що він буде поверх інших елементів */
+
+    background: #f1c40f;
+    padding: 15px;
+    border: 2px solid #e67e22;
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+
+/* Список за допомогою position */
+
+
+.footer__container {
+    max-width: 351px;
+    margin: 0 auto;
+    padding: 25px 15px;
+}
+
+.footer__item {
+    position: relative;
+    min-height: 30px;
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 1.8;
+
+}
+
+.footer__item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.footer__item--green::before {
+    content: "";
+    background: url(../img/check_green.svg) 0 0 / 100% no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.footer__item--grey::before {
+    content: "";
+    background: url(../img/check_grey.svg) 0 0 / 100% no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
