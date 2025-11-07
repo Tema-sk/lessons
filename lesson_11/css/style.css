@@ -1,0 +1,472 @@
+/* скидання стилів */
+@import url("reset.css");
+
+/* Локальне підключення шрифту */
+
+@import url("fonts.css");
+
+/* Шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap');
+
+/* lesson 11 */
+
+.header {
+    background: #26f1d6;
+}
+
+.header__container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header__title {
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #c73838;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* 2-D */
+.header__text {
+    font-size: 30px;
+    color: #0814be;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+/* РОЗТАШУВАННЯ ЗОВНІШНІХ КВАДРАТІВ */
+.header__items {
+    font-size: 0;
+    /* Видалення пробілів */
+    margin: 0 -40px;
+    /* Відступи */
+    text-align: center;
+
+}
+
+.header__item {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    /* ВЕЛИКИЙ КВАДРАТ */
+    font-size: 20px;
+    padding: 0 20px;
+    /* Приберіть, якщо не потрібно, бо це змінить фактичну ширину */
+
+    background: #34e610;
+    position: relative;
+    overflow: hidden;
+    /* Важливо для трансформацій */
+    margin-bottom: 40px;
+}
+
+/* 2. КОНТЕЙНЕРИ: Гарантуємо 100% висоти */
+.item-header__container,
+.item-header__content {
+    width: 100%;
+    height: 100%;
+}
+
+/* КОНТЕЙНЕР ДЛЯ СМУГ */
+.item-header__items {
+    width: 100%;
+    height: 100%;
+
+    /* Видаляємо небажані вертикальні проміжки, що виникають з inline-block */
+    line-height: 0;
+}
+
+
+/* 3. ВНУТРІШНІ ЕЛЕМЕНТИ (СМУГИ) */
+
+[class^="list__"] {
+    /* Робимо елементи inline-block */
+    display: inline-block;
+
+    /* Фіксуємо висоту! */
+    height: 33.333%;
+    width: 100%;
+
+    /* Додаткові стилі */
+    background: #497440;
+    color: white;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+
+    /* Повертаємо line-height та font-size для тексту */
+    line-height: normal;
+    font-size: 20px;
+
+    /* Центрування тексту: */
+    text-align: center;
+    /* Використовуємо vertical-align: top, щоб уникнути проблем з базовою лінією */
+    vertical-align: top;
+
+
+}
+
+/* Стилі для центрування тексту всередині p, якщо p не має фіксованої висоти */
+
+.list__items p {
+    /* Забезпечуємо вертикальне центрування */
+    margin: 0;
+    position: relative;
+    top: 50%;
+
+}
+
+/* --- Translate --- */
+
+/* Наведення на ПЕРШУ смугу */
+.header__item:nth-child(1) .item-header__items div:nth-child(1):hover {
+    transform: translate(50px, 20px);
+    background: #e74c3c;
+}
+
+/* Наведення на ДРУГУ смугу */
+.header__item:nth-child(1) .item-header__items div:nth-child(2):hover {
+    transform: translateX(50px);
+    background: #f39c12;
+}
+
+/* Наведення на ТРЕТЮ смугу */
+.header__item:nth-child(1) .item-header__items div:nth-child(3):hover {
+    transform: translateY(-50px);
+    background: #1abc9c;
+}
+
+
+/* --- scale --- */
+
+/* Наведення на ПЕРШУ смугу */
+.header__item:nth-child(2) .item-header__items div:nth-child(1):hover {
+    transform: scale(1.2);
+    background: #e74c3c;
+}
+
+/* Наведення на ДРУГУ смугу */
+.header__item:nth-child(2) .item-header__items div:nth-child(2):hover {
+    transform: scaleX(0.5);
+    background: #f39c12;
+}
+
+/* Наведення на ТРЕТЮ смугу */
+.header__item:nth-child(2) .item-header__items div:nth-child(3):hover {
+    transform: scaleY(0.5);
+    background: #1abc9c;
+}
+
+/* rotate */
+
+.list__rotate:hover {
+    rotate: 30deg;
+    color: rgb(238, 16, 16);
+}
+
+.list__rotatex:hover {
+    transform: rotateX(30deg);
+    color: rgb(238, 16, 16);
+}
+
+.list__rotatey:hover {
+    transform: rotateY(30deg);
+    color: rgb(238, 16, 16);
+}
+
+/* skew */
+
+.list__skew:hover {
+    transform: skew(30deg, 30deg);
+    color: rgb(238, 16, 16);
+}
+
+.list__skewx:hover {
+    transform: skew(30deg, 0deg);
+    color: rgb(238, 16, 16);
+}
+
+.list__skewy:hover {
+    transform: skew(0deg, 30deg);
+    color: rgb(238, 16, 16);
+}
+
+/* matrix */
+
+.list__matrix:hover {
+    transform: matrix(1.2, 0.2, 0, 1.2, 40, 20);
+    color: rgb(238, 16, 16);
+}
+
+.list__matrixx:hover {
+    transform: translate(20%, 20%) scale(0.5) rotate(30deg) skew(20deg, 20deg);
+    color: rgb(238, 16, 16);
+}
+
+.list__transform-origin:hover {
+    transform-origin: right top;
+    transform: rotate(55deg);
+    color: rgb(238, 16, 16);
+}
+
+
+/* 3-D */
+
+.header__items3d {
+    font-size: 0;
+    /* Видаляє проміжки між inline-block елементами */
+    text-align: center;
+    /* Центрує ряд квадратів */
+    padding: 50px 0;
+    /* Перспектива */
+    perspective: 1200px;
+}
+
+
+.header__item3d {
+    display: inline-block;
+    /* Розмір квадрата */
+    width: 350px;
+    height: 350px;
+    background: #03286b;
+    color: white;
+    font-size: 20px;
+    /* Повертаємо нормальний шрифт для вмісту */
+    position: relative;
+    overflow: hidden;
+    /* Обрізає вміст, що виходить за межі */
+
+
+    /* Додаємо transform-style, щоб 3D-простір був єдиним */
+    transform-style: preserve-3d;
+}
+
+
+
+.header__item3d:not(:last-child) {
+    margin-right: 45px;
+    /* Відступи між квадратами о крім останього */
+}
+
+.item3d-header__translate3d,
+
+.item3d-header__scale3d,
+
+.item3d-header__rotate3d,
+
+.item3d-header__matrix3d {
+    position: relative;
+    top: 50%;
+    /* Центрує текст в середені */
+}
+
+
+.item3d-header__translate3d:hover {
+    font-size: 60px;
+    transform: translate3d(20px, 30px, 100px);
+    color: #26f1d6;
+    background: #c73838;
+}
+
+.item3d-header__scale3d:hover {
+    font-size: 60px;
+    transform: scale3d(2, 2, 3);
+    color: #26f1d6;
+    background: #c73838;
+}
+
+.item3d-header__rotate3d:hover {
+    font-size: 70px;
+    transform: rotate3d(7, 2, 3, 50deg);
+    color: #26f1d6;
+    background: #c73838;
+}
+
+.item3d-header__matrix3d:hover {
+    transform: translate3d(20px, 20px, 100px) scale3d(4, 2, 3);
+    color: #26f1d6;
+    background: #c73838;
+}
+
+/* submarine */
+.submarine {
+    background: url(/img/ocean.jpg) 0 0 / cover no-repeat;
+
+}
+
+.submarine__container {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+
+}
+
+.periscope-submarine__up {
+    width: 20px;
+    height: 120px;
+    background: #000000;
+    border-radius: 98% 2% 0% 25% / 15% 25% 25% 0%;
+    transform: translate(400px, 70px);
+}
+
+.periscope-submarine__horizon {
+    width: 60px;
+    height: 20px;
+    background: #000000;
+    border-radius: 99% 1% 0% 25% / 29% 25% 25% 1%;
+    transform: translate(410px, -54px);
+}
+
+.periscope-submarine__lens {
+
+    width: 50px;
+    height: 50px;
+    background: #6ab4f0;
+    border-radius: 50px;
+    border: 12px solid #f5a106;
+    transform: translate(435px, -89px) rotateX(50deg);
+
+}
+
+.submarine__head {
+    width: 209px;
+    height: 100px;
+    background: #ebd407;
+    border-radius: 50% 47% 22% 30% / 27% 27% 0% 0%;
+    transform: translateX(300px);
+}
+
+.submarine__body-centr {
+    width: 800px;
+    height: 400px;
+    background: #ebd407;
+    border-radius: 25% 25% 25% 25% / 45% 44% 46% 47%;
+    padding-top: 100px;
+    border: 1px solid #070707;
+}
+
+.submarine__window {
+    width: 209px;
+    height: 332px;
+    background: #6ab4f0;
+    border-radius: 77% 23% 23% 77% / 48% 47% 52% 52%;
+    transform: translateY(-60px);
+    box-shadow: inset 35px 50px 10px rgba(253, 253, 253, 0.4);
+
+}
+
+.submarine__img {
+    width: 150px;
+    height: 150px;
+    transform: translate(20px, 80px);
+
+}
+
+.submarine__window--head {
+    width: 50px;
+    height: 50px;
+    background: #6ab4f0;
+    border-radius: 50px;
+    transform: translate(60px, 30px);
+    border: 7px solid #b10505;
+    margin-left: 20px;
+
+
+}
+
+.submarine__window--small {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: #6ab4f0;
+    border-radius: 100px;
+    transform: translate(220px, -300px);
+    border: 7px solid #b10505;
+    margin-left: 20px;
+
+}
+
+
+.submarine__line {
+    width: 120px;
+    height: 40px;
+    background: #000000;
+    border-radius: 24% 24% 24% 24% / 0% 50% 50% 0%;
+    transform: translate(799px, -220px);
+
+}
+
+
+.submarine__screw.screw-submarine {
+
+    width: 40px;
+    height: 250px;
+    transform: translate(850px, -360px);
+}
+
+.screw-submarine__up,
+.screw-submarine__down {
+    width: 40px;
+    height: 120px;
+    background: #b40606;
+    border-radius: 48% 51% 50% 50% / 25% 25% 75% 75%;
+}
+
+
+.screw-submarine__up {
+    top: 0;
+    transform: none;
+}
+
+.screw-submarine__down {
+    top: 120px;
+    transform: scaleY(-1);
+}
+
+footer {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.map {
+    display: inline-block;
+
+}
+
+.map__body {
+    position: relative;
+    perspective: 800px;
+}
+
+.map__east,
+.map__west {
+    transition: all 0.6s;
+    border-radius: 220px;
+    overflow: hidden;
+}
+
+
+.map__east {
+
+    transform: rotateX(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.map__west {
+
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+}
+
+
+.map__body:hover .map__east {
+    transform: rotateX(0deg);
+}
+
+.map__body:hover .map__west {
+    transform: rotateX(-180deg);
+}

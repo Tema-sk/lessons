@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- шрифти-->
+    <!-- lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <!-- Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open%20Sans:wght@700&display=swap" rel="stylesheet">
+    <!-- стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>lesson 11</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__title">
+                <h1>Lesson 11 Homework</h1>
+            </div>
+            <div class="header__text">2D Трансформація</div>
+            <div class="header__container">
+                <div class="header__content">
+                    <div class="header__items">
+
+                        <div class="header__item item-header">
+                            <div class="item-header__container">
+                                <div class="item-header__content">
+                                    <div class="item-header__items list">
+                                        <div class="list__translate">
+                                            <p>
+                                                Translate по (X,Y)
+                                            </p>
+                                        </div>
+                                        <div class="list__translatex">
+                                            <p>
+                                                Translate по (X)
+                                            </p>
+                                        </div>
+                                        <div class="list__translatey">
+                                            <p>
+                                                Translate по (Y)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__item item-header">
+                            <div class="item-header__container">
+                                <div class="item-header__content">
+                                    <div class="item-header__items list">
+                                        <div class="list__scale">
+                                            <p>
+                                                Scale в n-разів
+                                            </p>
+                                        </div>
+                                        <div class="list__scalex">
+                                            <p>
+                                                Scale по (X)
+                                            </p>
+                                        </div>
+                                        <div class="list__scaley">
+                                            <p>
+                                                Scale по (Y)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__item item-header">
+                            <div class="item-header__container">
+                                <div class="item-header__content">
+                                    <div class="item-header__items list">
+                                        <div class="list__rotate">
+                                            <p>
+                                                Rotate
+                                            </p>
+                                        </div>
+                                        <div class="list__rotatex">
+                                            <p>
+                                                Rotate по (X)
+                                            </p>
+                                        </div>
+                                        <div class="list__rotatey">
+                                            <p>
+                                                Rotate по (Y)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__item item-header">
+                            <div class="item-header__container">
+                                <div class="item-header__content">
+                                    <div class="item-header__items list">
+                                        <div class="list__skew">
+                                            <p>
+                                                Skew
+                                            </p>
+                                        </div>
+                                        <div class="list__skewx">
+                                            <p>
+                                                Skew по (X)
+                                            </p>
+                                        </div>
+                                        <div class="list__skewy">
+                                            <p>
+                                                Skew по (Y)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__item item-header">
+                            <div class="item-header__container">
+                                <div class="item-header__content">
+                                    <div class="item-header__items list">
+                                        <div class="list__matrix">
+                                            <p>
+                                                Matrix (a,b,c,d,x,y)
+                                            </p>
+                                        </div>
+                                        <div class="list__matrixx">
+                                            <p>
+                                                Transform: translate() scale() rotate() skew();
+                                            </p>
+                                        </div>
+                                        <div class="list__transform-origin">
+                                            <p>
+                                                Transform-origin
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3D -->
+
+            <div class="header__text">3D Трансформація</div>
+            <div class="header__container3d">
+                <div class="header__content3d">
+                    <div class="header__items3d">
+                        <div class="header__item3d item3d-header">
+                            <div class="item3d-header__translate3d">
+                                <p> Translate3d</p>
+                            </div>
+                        </div>
+                        <div class="header__item3d item3d-header">
+                            <div class="item3d-header__scale3d">
+                                <p> Scale3d</p>
+                            </div>
+                        </div>
+                        <div class="header__item3d item3d-header">
+                            <div class="item3d-header__rotate3d">
+                                <p> Rotate3d</p>
+                            </div>
+                        </div>
+                        <div class="header__item3d item3d-header">
+                            <div class="item3d-header__matrix3d">
+                                <p> Matrix3d</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+
+
+    <main>
+        <!-- submarine -->
+        <div class="submarine">
+            <div class="submarine__wrapper">
+                <div class="submarine__container">
+                    <div class="submarine__content">
+
+                        <div class="submarine__periscope periscope-submarine">
+                            <div class="periscope-submarine__up"></div>
+                            <div class="periscope-submarine__horizon"></div>
+                            <div class="periscope-submarine__lens"></div>
+                        </div>
+
+                        <div class="submarine__head">
+                            <div class="submarine__window submarine__window--head"></div>
+                        </div>
+                        <div class="submarine__body-centr">
+                            <div class="submarine__items">
+                                <div class="submarine__window">
+                                    <img class="submarine__img" src="/img/stitch.png" alt="Стіч">
+                                </div>
+                                <div class="submarine__window submarine__window--small"></div>
+                                <div class="submarine__window submarine__window--small"></div>
+                                <div class="submarine__window submarine__window--small"></div>
+                            </div>
+                        </div>
+                        <div class="submarine__line"></div>
+                        <div class="submarine__screw screw-submarine">
+                            <div class="screw-submarine__up"></div>
+                            <div class="screw-submarine__down"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+
+        <div class="map">
+            <div class="map__body">
+                <div class="map__east">
+                    <img src="/img/east.jpg" alt="Східна півкуля">
+                </div>
+                <div class="map__west">
+                    <img src="img/west.jpg" alt="Західна півкуля">
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
