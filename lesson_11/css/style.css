@@ -291,7 +291,7 @@
 
 /* submarine */
 .submarine {
-    background: url(../img/ocean.jpg) 0 0 / cover no-repeat;
+    background: url("../img/ocean.jpg") 0 0 / cover no-repeat;
 
 }
 
