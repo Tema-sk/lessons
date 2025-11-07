@@ -1,0 +1,499 @@
+/* скидання стилів */
+@import url("reset.css");
+
+/* Локальне підключення шрифту */
+
+@import url("fonts.css");
+
+/* Шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap');
+
+/* lesson 12 */
+.lesson {
+    text-align: center;
+    font-size: 30px;
+    color: #b10505;
+    margin-bottom: 25px;
+
+}
+
+.lesson__title {
+    text-align: center;
+    font-size: 25px;
+    color: #4ff10f;
+    margin-bottom: 30px;
+}
+
+.section {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0;
+    min-height: 350px;
+}
+
+
+.section>div {
+
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 5px;
+    vertical-align: top;
+}
+
+
+.section a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    border: 5px solid #ec0b0b;
+    border-radius: 25px;
+}
+
+[class^="section__transition-"] {
+    width: 200px;
+    height: 200px;
+    background: #053ea8;
+
+}
+
+.section__transition-duration {
+    transition-duration: 0.5s;
+}
+
+.section__transition-duration:hover {
+    width: 300px;
+    height: 300px;
+    background: #070707;
+    color: #b10505;
+    transition-duration: 1s;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+}
+
+.section__transition-property {
+
+    transition-duration: 0.5s, 0.8s;
+    transition-property: width, height;
+
+}
+
+.section__transition-property:hover {
+
+    width: 300px;
+    height: 300px;
+    background: #ebd303;
+    transition-duration: 0.1s, 0.5s;
+    transition-property: width, height;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #b10505;
+}
+
+.section__transition-delay {
+    transition-duration: 0.3s, 0.5s;
+    transition-property: width, height;
+    transition-delay: 0.5s, 0.3s;
+}
+
+.section__transition-delay:hover {
+    width: 300px;
+    height: 300px;
+    background: #8db0f1;
+    transition-duration: 0.5s, 1s;
+    transition-property: width, height;
+    transition-delay: 1s, 0.5s;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #b10505;
+
+
+}
+
+.section__transition-timing-function {
+    transition-duration: 2s;
+}
+
+.section__transition-timing-function:hover {
+    width: 300px;
+    height: 300px;
+    background: #0256f3;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #b10505;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.44, .16, .04, 2.98);
+}
+
+/*  Animation & @keyframes */
+
+.block {
+    background: #0256f3;
+}
+
+.block__container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #283857;
+
+}
+
+.block__content {
+    background: #32c006;
+    padding-left: 300px;
+}
+
+.block__items {
+    font-size: 0;
+}
+
+[class^="block__item-"] {
+    display: inline-block;
+    font-size: 16px;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background: #d4e208;
+    border: 10px dashed #000000;
+    margin: 0 20px 20px 0;
+}
+
+.block__text {
+    font-size: 20px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    color: #b10505;
+}
+
+@keyframes animation {
+    0% {
+        background: #0256f3
+    }
+
+    50% {
+        background: #bcc7b9
+    }
+
+    100% {
+        background: #283857
+    }
+
+}
+
+@keyframes animation-rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+
+}
+
+@keyframes animation-move {
+    0% {
+        transform: translateX(0) scale(1);
+
+    }
+
+    100% {
+        transform: translateX(250px) scale(0.5);
+    }
+
+}
+
+
+
+.block__item-1 {
+    animation-name: animation, animation-rotate, animation-move;
+
+}
+
+.block__item-2:hover {
+    animation-name: animation, animation-rotate;
+    animation-duration: 5s, 7s;
+}
+
+.block__item-3:hover {
+    animation-name: animation-rotate;
+    animation-duration: 5s;
+    /* animation-timing-function: linear; */
+    /* швидкість анімації не змінюється */
+    animation-timing-function: cubic-bezier(0, -0.8, 0.82, 2);
+}
+
+.block__item-4 {
+
+    animation-name: animation-rotate;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0, -0.8, 0.82, 2);
+}
+
+.block__item-4:hover {
+    animation-play-state: paused;
+}
+
+.block__item-5 {
+
+    animation-name: animation-move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
+}
+
+.block__item-5:hover {
+    animation-play-state: paused;
+    background-color: #b10505;
+
+}
+
+.block__item-6 {
+    animation-name: animation-move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: paused;
+
+}
+
+.block__item-6:hover {
+    animation-play-state: running;
+    background-color: #b10505;
+}
+
+.block__item-7:hover {
+    animation-name: animation-rotate;
+    animation-delay: 1s;
+    animation-duration: 5s;
+}
+
+.block__item-8 {
+
+    animation-name: animation-move;
+    animation-duration: 10s;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+/* submarine */
+.submarine {
+    background: url("../img/ocean.jpg") 0 0 / cover no-repeat;
+
+}
+
+.submarine__container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.periscope-submarine__up {
+    width: 20px;
+    height: 120px;
+    background: #000000;
+    border-radius: 98% 2% 0% 25% / 15% 25% 25% 0%;
+    transform: translate(400px, 70px);
+}
+
+.periscope-submarine__horizon {
+    width: 60px;
+    height: 20px;
+    background: #000000;
+    border-radius: 99% 1% 0% 25% / 29% 25% 25% 1%;
+    transform: translate(410px, -54px);
+}
+
+.periscope-submarine__lens {
+
+    width: 50px;
+    height: 50px;
+    background: #6ab4f0;
+    border-radius: 50px;
+    border: 12px solid #f5a106;
+    transform: translate(435px, -89px) rotateX(50deg);
+
+}
+
+.submarine__head {
+    width: 209px;
+    height: 100px;
+    background: #ebd407;
+    border-radius: 50% 47% 22% 30% / 27% 27% 0% 0%;
+    transform: translateX(300px);
+}
+
+.submarine__body-centr {
+    width: 800px;
+    height: 400px;
+    background: #ebd407;
+    border-radius: 25% 25% 25% 25% / 45% 44% 46% 47%;
+    padding-top: 100px;
+    border: 1px solid #070707;
+}
+
+.submarine__window {
+    width: 209px;
+    height: 332px;
+    background: #6ab4f0;
+    border-radius: 77% 23% 23% 77% / 48% 47% 52% 52%;
+    transform: translateY(-60px);
+    box-shadow: inset 35px 50px 10px rgba(253, 253, 253, 0.4);
+
+}
+
+.submarine__img {
+    width: 150px;
+    height: 150px;
+    transform: translate(20px, 80px);
+
+}
+
+.submarine__window--head {
+    width: 50px;
+    height: 50px;
+    background: #6ab4f0;
+    border-radius: 50px;
+    transform: translate(60px, 30px);
+    border: 7px solid #b10505;
+    margin-left: 20px;
+
+
+}
+
+.submarine__window--small {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: #6ab4f0;
+    border-radius: 100px;
+    transform: translate(220px, -300px);
+    border: 7px solid #b10505;
+    margin-left: 20px;
+
+}
+
+
+.submarine__line {
+    width: 120px;
+    height: 40px;
+    background: #000000;
+    border-radius: 24% 24% 24% 24% / 0% 50% 50% 0%;
+    transform: translate(799px, -220px);
+
+}
+
+
+.submarine__screw.screw-submarine {
+
+    width: 40px;
+    height: 250px;
+    transform: translate(880px, -360px);
+}
+
+.screw-submarine__up,
+.screw-submarine__down {
+    width: 40px;
+    height: 120px;
+    background: #b40606;
+    border-radius: 48% 51% 50% 50% / 25% 25% 75% 75%;
+}
+
+
+.screw-submarine__up {
+
+    transform: none;
+}
+
+.screw-submarine__down {
+
+    transform: scaleY(-1);
+}
+
+/* animation submarine*/
+
+
+
+@keyframes sail {
+    0% {
+        transform: translate(10px, -30px) scale(0.3);
+
+    }
+
+    50% {
+        transform: translate(-40px, 35px) scale(0.6);
+
+    }
+
+    100% {
+        transform: translate(10px, 10px) scale(1);
+
+    }
+}
+
+
+.submarine__content {
+
+    position: relative;
+
+    /* Застосування анімації */
+    animation: sail 10s ease-in-out infinite alternate;
+}
+
+@keyframes periscope {
+    0% {
+        transform: translateY(10px);
+        /* Початкова позиція */
+    }
+
+    50% {
+        transform: translateY(20px);
+        /* Плавно зміщуємо вправо та трохи вгору */
+    }
+
+    100% {
+        transform: translateY(30px);
+        /* Повертаємо назад */
+    }
+}
+
+.submarine__content:hover {
+    animation-play-state: paused;
+}
+
+.periscope-submarine:hover {
+    /* Застосування анімації */
+    animation: periscope 3s infinite alternate;
+}
+
+@keyframes screw {
+    0% {
+        transform: rotate(0deg);
+        /* Початкова позиція */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Повертаємо назад */
+    }
+}
+
+.screw-submarine__up,
+.screw-submarine__down {
+    animation: screw 0.1s linear infinite;
+}
+
+.screw-submarine__up {
+    transform-origin: bottom;
+}
+
+.screw-submarine__down {
+    transform-origin: top;
+}
