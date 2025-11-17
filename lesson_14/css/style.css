@@ -1,0 +1,231 @@
+/* скидання стилів */
+@import url("reset.css");
+
+/* Локальне підключення шрифту */
+
+@import url("fonts.css");
+
+/* Шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400&display=swap');
+
+/* lesson 14 */
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #0a0a0a;
+    padding: 30px;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+[class*="__container"] {
+    max-width: 1420px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header, .footer {
+    text-align: center;
+    font-size: 30px;
+    color: #b10505;
+    margin-bottom: 25px;
+}
+
+
+
+.register__content {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    line-height: 1.25;
+    padding-top: 82px;
+    padding-bottom: 82px;
+}
+
+.register__content h3 {
+    color: #2f302c;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 36px;
+
+}
+
+.register__content p {
+    color: #7e7f7c;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+
+
+.section {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    padding-top: 82px;
+    padding-bottom: 82px;
+}
+
+
+
+.section__form {
+    min-width: 712px;
+    min-height: 496px;
+}
+
+
+
+
+.form__title {
+    color: #2f302c;
+    font-size: 32px;
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+}
+
+.form__link,
+.form__text {
+    color: #7e7f7c;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1.25;
+    text-transform: none;
+    margin-bottom: 72px;
+}
+
+.form__link {
+    color: #2f302c;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* ---------------------------------------- */
+
+.form__register {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.form__row {
+    margin-bottom: 40px;
+    /* Вертикальний відступ між рядками */
+}
+
+/* Flex-стилі для рядків із двома полями */
+.form__row--two-fields {
+    display: flex;
+    gap: 40px;
+    /* Проміжок між полями в одному рядку */
+}
+
+/* Контейнер для окремого поля вводу */
+.form__input {
+    /* Цей стиль робить кожне поле в ряду рівної ширини */
+    flex: 1 1 50%;
+}
+
+
+.form__field,
+.form__fon {
+    width: 100%;
+    /* Забезпечує, що поле заповнює свій батьківський .form__input */
+    padding: 12px 0;
+    border-bottom: 1px solid #c0c0c0;
+
+    font-size: 14px;
+    outline: none;
+    color: #2f302c;
+    /* Стилі для кнопки Reset, що імітує input-поле */
+    background: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Перезапис фону для кнопки Reset, щоб бути впевненим */
+.form__reset-btn {
+    background: none;
+}
+
+
+/* Стиль для кнопки "Create an account" */
+.form__btn {
+    padding: 12px 0;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 50%;
+    align-self: flex-start;
+}
+
+/* Стиль для Placeholder */
+.form__field::placeholder,
+.form__fon::placeholder {
+    color: #7e7f7c;
+}
+
+/* ///////////// */
+
+
+
+.discont {
+    width: 100%;
+    overflow: hidden;
+    max-width: 600px;
+    background-color: #f6f6f6;
+    position: relative;
+}
+
+.discont__info::before {
+    content: "HOT";
+    width: 100%;
+    display: flex;
+    padding: 4px 8px;
+    max-width: 51px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: uppercase;
+    background: #ce0000;
+    color: #fff;
+
+}
+
+.discont__info {
+    max-width: 184px;
+
+    color: #2f302c;
+    font-size: 32px;
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    line-height: 1.25;
+    text-transform: uppercase;
+    position: absolute;
+    transform: translate(80px, 276px);
+
+}
+
+.discont__img {
+    max-width: 378px;
+    translate: 172px 0;
+
+}
+
+/* /////////// */
