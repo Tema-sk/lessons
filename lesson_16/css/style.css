@@ -340,7 +340,6 @@ body {
 
 /* ---------card-------------- */
 
-
 .page-head__card {
 	position: relative;
 }
@@ -379,20 +378,18 @@ body {
 	margin-bottom: 20px;
 }
 
-.card-head__title {
+
+.card-head__title h1 {
 	color: #2f302c;
 	font-size: 96px;
 	font-weight: 800;
 	line-height: 1.02;
 	text-transform: uppercase;
 	margin-left: -5px;
-}
-
-.card-head__title h1 {
 	margin-bottom: 16px;
 }
 
-.card-head__subsubtitle {
+.card-head__title span {
 	font-weight: 700;
 
 
@@ -418,6 +415,14 @@ body {
 	line-height: 1.33;
 	text-transform: none;
 	max-width: 374px;
+
+}
+
+.footer__content {
+	font-size: 20px;
+	line-height: 1.4;
+	text-align: center;
+	color: rgb(245, 6, 6);
 
 }
 
@@ -482,7 +487,7 @@ body {
 		z-index: 1;
 	}
 
-	.card-head__title,
+	.card-head__title h1,
 	.card-head__text,
 	.card-head__subtitle {
 		color: #fff;
@@ -500,7 +505,7 @@ body {
 		position: absolute;
 		/* Координати, щоб розмістити контент */
 		top: 80px;
-		left: 100px;
+		left: 90px;
 
 	}
 
@@ -513,11 +518,8 @@ body {
 		margin-bottom: 10px;
 	}
 
-	.card-head__title {
-		font-size: 70px;
-	}
-
 	.card-head__title h1 {
+		font-size: 70px;
 		margin-bottom: 16px;
 	}
 
@@ -550,7 +552,7 @@ body {
 		margin-bottom: 10px;
 	}
 
-	.card-head__title {
+	.card-head__title h1 {
 		font-size: 50px;
 	}
 
