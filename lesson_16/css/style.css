@@ -374,11 +374,6 @@ body {
 
 }
 
-.title {
-	margin-bottom: 20px;
-}
-
-
 .card-head__title h1 {
 	color: #2f302c;
 	font-size: 96px;
@@ -390,6 +385,7 @@ body {
 }
 
 .card-head__title span {
+	display: block;
 	font-weight: 700;
 
 
@@ -432,7 +428,7 @@ body {
 	.card-head__content {
 		position: absolute;
 		/* Координати, щоб розмістити контент */
-		left: 500px;
+		left: 50%;
 	}
 }
 
@@ -442,7 +438,7 @@ body {
 		position: absolute;
 		/* Координати, щоб розмістити контент */
 		top: 100px;
-		left: 300px;
+		left: 30%;
 	}
 }
 
@@ -452,7 +448,7 @@ body {
 		position: absolute;
 		/* Координати, щоб розмістити контент */
 		top: 90px;
-		left: 200px;
+		left: 20%;
 
 	}
 
@@ -505,7 +501,7 @@ body {
 		position: absolute;
 		/* Координати, щоб розмістити контент */
 		top: 80px;
-		left: 90px;
+		left: 20%;
 
 	}
 
@@ -540,7 +536,7 @@ body {
 		position: absolute;
 		/* Координати, щоб розмістити контент */
 		top: 80px;
-		left: 110px;
+		left: 19%;
 	}
 
 	.card-head__subtitle {
