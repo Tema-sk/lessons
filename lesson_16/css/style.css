@@ -435,8 +435,6 @@ body {
 /* -----------------------1200------------------------------------ */
 @media (width <=1200px) {
 	.card-head__content {
-		position: absolute;
-		/* Координати, щоб розмістити контент */
 		top: 100px;
 		left: 30%;
 	}
@@ -445,18 +443,18 @@ body {
 /* -----------------------922---------------------------------- */
 @media (width <=922px) {
 	.card-head__content {
-		position: absolute;
-		/* Координати, щоб розмістити контент */
 		top: 90px;
-		left: 20%;
+		left: 25%;
 
 	}
 
 	.card-head__imge {
+
 		position: relative;
 		/* Необхідно для позиціонування накладки */
 		overflow: hidden;
 		/* Обрізає все, що виходить за межі контейнера */
+
 	}
 
 	.card-head__imge img {
@@ -510,9 +508,6 @@ body {
 		margin-bottom: 10px;
 	}
 
-	.title {
-		margin-bottom: 10px;
-	}
 
 	.card-head__title h1 {
 		font-size: 70px;
@@ -550,9 +545,6 @@ body {
 
 	.card-head__title h1 {
 		font-size: 50px;
-	}
-
-	.card-head__title h1 {
 		margin-bottom: 8px;
 	}
 
