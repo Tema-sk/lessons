@@ -57,6 +57,7 @@ body {
 /* logo  */
 
 .header__image-logo {
+
 	width: 200px;
 	max-width: none;
 }
@@ -77,6 +78,17 @@ body {
 	width: 15px;
 	flex-shrink: 0;
 	background: url("../img/icons/search.svg") left no-repeat;
+	background-size: contain;
+	z-index: 7;
+
+
+}
+
+.search-header__button:hover {
+
+	background-color: #faf7f7;
+
+
 }
 
 .search-header__input {
@@ -114,6 +126,10 @@ body {
 	text-transform: uppercase;
 }
 
+.menu__link:hover {
+	color: #d40d0d;
+}
+
 /* ------action--------- */
 
 .action-header {
@@ -127,9 +143,15 @@ body {
 
 }
 
+.action-header__link:hover {
+	color: #d40d0d;
+}
+
 .action-header__link--love {
 	background: url("../img/icons/favorite.svg") left no-repeat;
 }
+
+
 
 .action-header__link--cart {
 	background: url("../img/icons/cart.svg") left no-repeat;
@@ -140,12 +162,12 @@ body {
 @media (width <=1422px) {
 	.header__container {
 		min-height: 120px;
-		gap: 40px;
+		gap: 25px;
 	}
 
 	.action-header,
 	.menu__list {
-		gap: 3px 25px;
+		gap: 3px 20px;
 
 	}
 
@@ -158,6 +180,7 @@ body {
 @media (width <=1200px) {
 	.header__search {
 		flex-basis: 190px;
+		gap: 30px;
 	}
 }
 
@@ -181,8 +204,22 @@ body {
 }
 
 @media (width < 768px) {
+	.header {
+		position: sticky;
+		top: 0;
+		/* Закріплюємо зверху */
+		left: 0;
+		/* Закріплюємо зліва */
+		width: 100%;
+		/* Розтягуємо на всю ширину */
+		z-index: 7;
+
+	}
+
+
 	.header__container {
 		min-height: 70px;
+
 	}
 
 	.icon-menu {
@@ -198,7 +235,7 @@ body {
 	.header__action,
 	.header__search {
 		position: relative;
-		z-index: 3;
+		z-index: 5;
 	}
 
 	.icon-menu span,
@@ -299,6 +336,26 @@ body {
 		left: 0;
 		z-index: 3;
 	}
+
+	.action-header__link--cart::after,
+	.action-header__link--love::after {
+		position: relative;
+		content: "";
+		width: 0;
+		left: 0;
+		height: 2px;
+		background: #0a0a0a;
+		bottom: -30px;
+		transition: width 0.5s;
+
+	}
+
+	.action-header__link--cart:hover::after,
+	.action-header__link--love:hover::after {
+		width: 100%;
+	}
+
+
 }
 
 @media (width < 480px) {
@@ -339,38 +396,22 @@ body {
 
 
 /* ---------card-------------- */
-
-.page-head__card {
-	position: relative;
-}
-
-.card-head__imge {
-	/* Зсуваємо елемент на 261px вліво */
-	margin-left: -249px;
-	/* Розраховуємо загальну ширину:
-       1422px (ширина контейнера) + 249px (ліворуч) + 249px (праворуч) = 1920px */
-	width: 1920px;
-
-}
-
-.card-head__imge img {
-	width: 100%;
-	height: auto;
+.page-head {
+	background: url("../img/Rectangle.jpg") left center / cover no-repeat, #d9d9d9;
+	padding-top: 114px;
+	padding-bottom: 110px;
 }
 
 .card-head__content {
-	position: absolute;
-	/* Координати, щоб розмістити контент */
-	top: 114px;
-	left: 752px;
-	z-index: 2;
-	padding: 10px;
+	max-width: 650px;
+	margin-left: auto;
 }
 
 .card-head__subtitle {
 	font-size: 20px;
 	line-height: 1.4;
 	margin-bottom: 20px;
+	text-transform: uppercase;
 
 }
 
@@ -387,8 +428,6 @@ body {
 .card-head__title span {
 	display: block;
 	font-weight: 700;
-
-
 }
 
 .card-head__title::after {
@@ -401,7 +440,6 @@ body {
 	max-width: 308px;
 
 }
-
 
 .card-head__text {
 	color: #7e7f7c;
@@ -425,46 +463,48 @@ body {
 /*----------------------- media-------------------------- */
 /* ----------------------1422--------------------------- */
 @media (width <=1422px) {
-	.card-head__content {
-		position: absolute;
-		/* Координати, щоб розмістити контент */
-		left: 50%;
+	.page-head {
+		padding-top: 100px;
+		padding-bottom: 96px;
 	}
+
 }
 
 /* -----------------------1200------------------------------------ */
 @media (width <=1200px) {
-	.card-head__content {
-		top: 100px;
-		left: 30%;
+	.page-head {
+		padding-top: 90px;
+		padding-bottom: 86px;
 	}
+
 }
 
 /* -----------------------922---------------------------------- */
 @media (width <=922px) {
-	.card-head__content {
-		top: 90px;
-		left: 25%;
 
+	.page-head {
+		padding-top: 80px;
+		padding-bottom: 76px;
 	}
 
-	.card-head__imge {
+	.card-head__content,
+	.card-head__text {
 
+		margin: 0 auto;
+	}
+
+	.card-head__content {
 		position: relative;
 		/* Необхідно для позиціонування накладки */
 		overflow: hidden;
 		/* Обрізає все, що виходить за межі контейнера */
-
+		padding-left: 15px;
+		padding-right: 15px;
+		text-align: center;
 	}
 
-	.card-head__imge img {
-		width: 100%;
-		height: 100%;
-		display: block;
-		object-fit: cover;
-	}
 
-	.card-head__imge::before {
+	.card-head__content::before {
 		content: "";
 
 		/* Розтягуємо накладку на всю площу батьківського елемента */
@@ -475,10 +515,10 @@ body {
 		height: 100%;
 		/* Задаємо колір фону */
 		background-color: #2e2c2c;
-		/* Встановлюємо прозорість 50% */
-		opacity: 0.5;
+		/* Встановлюємо прозорість 10% */
+		opacity: 0.1;
+		border-radius: 25px;
 
-		z-index: 1;
 	}
 
 	.card-head__title h1,
@@ -488,18 +528,15 @@ body {
 	}
 
 	.card-head__title::after {
-		max-width: 280px;
-		border-bottom: 1px solid #fff;
+		display: none;
+
 	}
 }
 
 /* -----------------------------768----------------------------- */
 @media (width < 768px) {
-	.card-head__content {
-		position: absolute;
-		/* Координати, щоб розмістити контент */
-		top: 80px;
-		left: 20%;
+	.page-head {
+		background: url("../img/Rectangle.jpg") 25% 75% / cover no-repeat, #d9d9d9;
 
 	}
 
@@ -514,11 +551,6 @@ body {
 		margin-bottom: 16px;
 	}
 
-	.card-head__title::after {
-		max-width: 200px;
-
-	}
-
 	.card-head__text {
 		max-width: 300px;
 	}
@@ -527,30 +559,13 @@ body {
 /* -----------------------------480----------------------------- */
 @media (width < 480px) {
 
-	.card-head__content {
-		position: absolute;
-		/* Координати, щоб розмістити контент */
-		top: 80px;
-		left: 19%;
-	}
-
 	.card-head__subtitle {
 		font-size: 16px;
-		margin-bottom: 10px;
-	}
-
-	.title {
-		margin-bottom: 10px;
 	}
 
 	.card-head__title h1 {
 		font-size: 50px;
-		margin-bottom: 8px;
-	}
-
-	.card-head__title::after {
-		max-width: 140px;
-
+		margin-bottom: 10px;
 	}
 
 	.card-head__text {
