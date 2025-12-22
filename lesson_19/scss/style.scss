@@ -1,0 +1,489 @@
+/* Скидання стилів */
+@use "_reset.scss";
+
+/* Основні стилі */
+body {
+	font-family: "Playfair Display", serif;
+	font-weight: 400;
+
+	// background-color: #333;
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper > main {
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-width: 63.75rem; /* 1020px */
+	margin: 0 auto;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+}
+[class*="--margin"] {
+	margin-bottom: 1.25rem;
+}
+/* ----------------------- */
+
+.wrapper {
+}
+.header {
+	background: url(../img/home.jpg) left center / cover no-repeat;
+
+	margin-bottom: 6.25rem;
+	// .header__container
+
+	&__container {
+		padding-top: 1.46em;
+		min-height: 44.6875rem; /* 715px */
+	}
+	// .header__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 7rem; /* 112px */
+
+		@media (width <=48em) /* 768px */ {
+			flex-direction: column;
+			row-gap: 0.625rem;
+
+			margin-bottom: 3rem; /* 48px */
+		}
+	}
+	// .header__logo
+
+	&__logo {
+		color: #fff;
+		font-size: 2.25rem; /* 36px */
+		text-transform: uppercase;
+
+		padding-left: 1.8125rem; /* 29px */
+
+		@media (width <=48em) /* 768px */ {
+			padding-left: 0;
+		}
+	}
+
+	// .header__menu
+
+	&__menu {
+		padding-right: 1.6875rem; /* 27px */
+
+		@media (width <=48em) /* 768px */ {
+			padding-right: 0;
+		}
+	}
+
+	// .header__content
+
+	&__content {
+		/* 1. Робимо контейнер гнучким */
+		display: flex;
+
+		/* 2. Встановлюємо напрямок */
+		flex-direction: column;
+
+		/* 3. Вирівнюємо дочірні елементи по горизонтальному центру */
+		align-items: center;
+
+		max-width: 32.25rem; /* 516px */
+		margin-left: auto;
+
+		@media (width <=48em) /* 768px */ {
+			align-items: center;
+
+			text-align: center;
+			margin: 0 auto;
+			padding-right: 0;
+		}
+	}
+
+	// .header__title
+
+	&__title {
+		margin-bottom: 1.5rem; /* 24px */
+
+		color: #fff;
+		font-size: 2.9375rem; /* 47px */
+		text-transform: capitalize;
+	}
+
+	// .header__text
+
+	&__text {
+		height: 3.125rem; /* 50px */
+		color: #fff;
+		font-size: 0.875rem; /* 14px */
+
+		padding-left: 1rem; /* 16px */
+		padding-right: 1rem; /* 16px */
+		margin-bottom: 3rem; /* 48px */
+
+		span {
+			text-transform: uppercase;
+		}
+	}
+
+	// .header__button
+
+	&__button {
+		font-size: 0.8125rem; /* 13px */
+		color: #fff;
+		padding: 0.875rem 1.5rem; /* 14px 24px */
+		border: 0.0625rem solid #fff; /* 1px */
+		&:hover {
+			background-color: #fff; /* Змінюємо фон на білий */
+			color: #000; /* Змінюємо текст на чорний */
+			box-shadow: 0 4px 8px rgba(196, 194, 194, 0.87); /* Додаємо легку тінь */
+		}
+	}
+}
+// .icon-menu {
+// 	display: none;
+// }
+.menu {
+	// .menu__list
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem; /* 32px */
+
+		@media (width <=48em) /* 768px */ {
+			gap: 1rem;
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+	}
+
+	// .menu__link
+
+	&__link {
+		color: #fff;
+		font-size: 0.75rem; /* 12px */
+
+		text-transform: capitalize;
+
+		//  СТИЛІ HOVER: НАВЕДЕННЯ
+		&:hover {
+			/* Це те саме, що .header__button:hover */
+
+			color: #ff0000; /* Змінюємо текст на чорний */
+			text-decoration: underline;
+			transition: width 0.7s;
+		}
+	}
+}
+.page {
+	// .page__container
+
+	&__container {
+	}
+}
+.about {
+	margin-bottom: 6.25rem;
+
+	&::after {
+		content: "";
+		display: block;
+
+		border-bottom: 1px solid #0c0c0c;
+		width: 100%;
+
+		padding-top: 6.25rem;
+	}
+
+	@media (width <=57.628em) /* 922px */ {
+		margin-bottom: 3rem;
+	}
+
+	// .about__content
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 5.8125rem;
+
+		margin-bottom: 8.5rem;
+
+		@media (width <=57.628em) /* 922px */ {
+			flex-wrap: wrap;
+			flex-direction: column;
+			gap: 3rem; /* 48px */
+
+			margin-bottom: 3rem;
+		}
+	}
+
+	// .about__info
+
+	&__info {
+		max-width: 36.1876rem;
+	}
+
+	// .about__title
+
+	&__title {
+		color: #000;
+		font-size: 1.875rem; /* 30px */
+		text-align: right;
+		text-transform: capitalize;
+
+		margin-bottom: 8.75rem; /* 140px */
+
+		@media (width <=57.628em) /* 922px */ {
+			text-align: center;
+
+			margin-bottom: 3rem; /* 48px */
+		}
+	}
+
+	// .about__subtitle
+
+	&__subtitle {
+		color: #000;
+		font-size: 1.875rem;
+
+		margin-bottom: 2.1875rem;
+
+		@media (width <=57.628em) /* 922px */ {
+			text-align: center;
+
+			margin-bottom: 3rem; /* 48px */
+		}
+	}
+
+	// .about__text
+
+	&__text {
+		color: #000;
+		p {
+			margin-bottom: 2.1875rem; // Додаємо відступ знизу для всіх параграфів
+
+			// За допомогою псевдокласу `:last-child`
+			// відміняємо відступ для останнього параграфа
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// .about__imeg
+
+	&__imeg {
+		padding-top: 8.75rem; /* 140px */
+		min-width: 19.8125rem; /* 317px */
+
+		@media (width <=57.628em) /* 922px */ {
+			padding-top: 0;
+		}
+	}
+
+	// .about__button
+
+	&__button {
+	}
+}
+
+.button {
+	color: #000;
+	font-size: 0.875rem; /* 14px */
+	text-align: center;
+
+	padding: 0.875rem 1.5rem; /* 14px 24px */
+	border: 0.0625rem solid #000000; /* 1px */
+	cursor: pointer; /* Показуємо, що можна натискати */
+
+	//  ЦЕНТРУВАННЯ
+	display: block; // Або inline-block, якщо це тег <a>
+	max-width: 8.25rem; /* 132px */
+	margin: 0 auto; // Центрує блочний елемент по горизонталі
+
+	&:hover {
+		background-color: #000000; /* Змінюємо фон на білий */
+		color: #ffffff; /* Змінюємо текст на чорний */
+		box-shadow: 0 4px 8px rgba(243, 242, 242, 0.87); /* Додаємо легку тінь */
+		transition: width 0.7s;
+	}
+}
+.producte {
+	margin-bottom: 7.3125rem; /* 117px */
+	&::after {
+		content: "";
+		display: block;
+
+		border-bottom: 1px solid #0c0c0c;
+		width: 100%;
+
+		padding-top: 6.25rem;
+	}
+
+	// .producte__title
+	&__title {
+		color: #000;
+		font-size: 2.25rem;
+		text-transform: capitalize;
+		text-align: center;
+
+		margin-bottom: 1.9375rem; /* 31px */
+	}
+
+	// .producte__menu
+
+	&__menu {
+		text-align: center;
+
+		margin-bottom: 6.3125rem; /* 101px */
+
+		@media (width <=48em) /* 768px */ {
+			margin-bottom: 3rem; /* 48px */
+		}
+	}
+
+	// .producte__card
+
+	&__card {
+		margin-bottom: 7.375rem; /* 118px */
+
+		@media (width <=48em) /* 768px */ {
+			margin-bottom: 3rem; /* 48px */
+		}
+	}
+
+	// .producte__button
+
+	&__button {
+	}
+}
+.menu-producte {
+	// 1. Центруємо весь список всередині контейнера
+	&__list {
+		display: flex;
+		justify-content: center; // Центрування по горизонталі
+		flex-direction: column;
+		gap: 30px; // Відстань між пунктами
+		list-style: none;
+		padding: 0;
+
+		@media (width <=48em) /* 768px */ {
+			flex-direction: row;
+			gap: 20px; // Відстань між пунктами
+		}
+	}
+
+	&__item {
+	}
+
+	&__link {
+		position: relative;
+		text-decoration: none;
+		color: #000;
+		font-size: 1.1rem;
+		padding: 5px 0;
+		transition: color 0.3s ease;
+
+		// Створюємо лінію (підкреслення)
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%; // Початкова точка - центр посилання
+			height: 1px;
+			width: 0; // Початкова ширина — 0
+			background-color: #2f302c;
+
+			// Тінь для лінії (якщо ви мали на увазі тінь лінії)
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+			// Анімація розширення з центру
+			transform: translateX(-50%);
+			transition: width 0.4s ease-in-out;
+		}
+
+		// Ефекти при наведенні (Hover)
+		&:hover {
+			color: #f70404; // Зміна кольору тексту
+
+			&::after {
+				width: 100%; // Лінія розширюється до повної ширини тексту
+			}
+		}
+	}
+}
+.card-producte {
+	padding-left: 6.9375rem; /* 111px */
+	padding-right: 5.375rem; /* 86px */
+
+	@media (width <=63.0625em) /* 1009px */ {
+		padding-left: 2rem; /* 48px */
+		padding-right: 2rem; /* 48px */
+	}
+
+	// .card-producte__list
+
+	&__list {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		gap: 5.6875rem;
+
+		@media (width <=63.0625em) /* 1009px */ {
+			gap: 2.3438rem;
+		}
+	}
+	// .card-producte__item
+
+	&__item {
+		border: #ffffff 0.0625rem solid; /* 1px */
+		max-width: 12.5rem; /* 200px */
+
+		&:hover {
+			border: #adacac 0.0625rem solid; /* 1px  Змінюємо фон */
+
+			box-shadow: 0 4px 8px rgba(153, 153, 153, 0.87); /* Додаємо легку тінь */
+
+			transition: width 0.4s;
+		}
+	}
+
+	// .card-producte__link
+
+	&__link {
+	}
+
+	// .card-producte__imge
+
+	&__imge {
+		margin-bottom: 1rem;
+	}
+	h3 {
+		color: #000;
+		font-size: 1.25rem;
+		text-transform: capitalize;
+		padding: 0.3125rem;
+	}
+}
+
+.footer {
+	// .footer__container
+
+	&__container {
+		color: #f70404;
+		text-align: center;
+		font-size: 2rem;
+
+		margin-bottom: 2rem;
+	}
+}
