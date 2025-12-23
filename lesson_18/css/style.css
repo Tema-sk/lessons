@@ -1,0 +1,872 @@
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Локальне підключення шрифтів */
+@import url("fonts.css");
+
+/* Підключення шрифтів */
+
+/* Основні стилі */
+
+/* Значення за замовченням  */
+body {
+	color: #7e7f7c;
+	font-family: "Lato", sans-serif;
+	/* background-color: #333; */
+}
+
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	overflow: clip;
+
+	display: flex;
+	flex-direction: column;
+
+}
+
+.wrapper>main {
+	flex-grow: 1;
+}
+
+/* ------------------------------------------------------------------- */
+[class*="__container"] {
+	max-width: 1229px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+
+}
+
+/* ------------------------------------------------------------------- */
+
+/* Header */
+
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 7;
+
+	background-color: #fff;
+}
+
+.header__container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+
+	padding-top: 33px;
+	padding-bottom: 20px;
+}
+
+
+.header__logo {
+	color: #ba936f;
+	font-size: 40px;
+	font-family: "Praysiredemo", sans-serif;
+	font-weight: 400;
+}
+
+.header__menu {}
+
+.menu {
+	flex-grow: 1;
+}
+
+.menu__body {}
+
+.menu__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 61px;
+}
+
+.menu__item {}
+
+.menu__link {
+	color: #343434;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+
+.menu__link:hover {
+	color: #ba936f;
+	text-decoration: underline;
+	transition: all 0.3s;
+}
+
+.button {
+
+	display: block;
+	background: #BA936F;
+	border-radius: 15px;
+}
+
+.button:hover {
+
+	background: #725133;
+	transition: all 0.5s;
+}
+
+.button--header {
+	min-width: 166px;
+}
+
+.button__link {
+
+	color: #fff;
+	font-size: 17px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+
+}
+
+.icon-menu {
+	display: none;
+}
+
+/* media____________header */
+
+/* --------------------------1200------------------------------------ */
+@media (width <=1200px) {
+
+	.decor {
+		display: none;
+	}
+
+	.menu__list {
+		gap: 40px;
+	}
+
+}
+
+/* --------------------------922---------------------------------- */
+@media (width <=922px) {
+	.header__container {
+		padding-top: 25px;
+
+	}
+
+	.header__logo {
+		font-size: 38px;
+	}
+
+	.menu__list {
+		gap: 27px;
+	}
+
+	.button--header {
+		min-width: 105px;
+	}
+}
+
+/* ------------------------------768----------------------------- */
+@media (width < 768px) {
+
+
+
+	.header__container {
+
+		justify-content: space-between;
+
+	}
+
+	.icon-menu {
+		display: block;
+		width: 30px;
+		height: 18px;
+		flex-shrink: 0;
+	}
+
+	.icon-menu,
+	.header__logo,
+	.button {
+		position: relative;
+		z-index: 5;
+	}
+
+	.icon-menu span,
+	.icon-menu::before,
+	.icon-menu::after {
+		background-color: #2f302c;
+		content: "";
+		height: 2px;
+		width: 30px;
+		position: absolute;
+		right: 0;
+		transition: all 0.3s;
+	}
+
+	.icon-menu::before {
+		top: 0;
+	}
+
+	.icon-menu::after {
+		bottom: 0;
+
+	}
+
+	.icon-menu span {
+		top: 50%;
+		translate: 0 -50%;
+	}
+
+	.menu {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 100%;
+		background-color: #f6f6f6;
+		z-index: 1;
+		overflow: auto;
+		padding: 100px 15px 30px 15px;
+		transition: left 0.3s;
+	}
+
+	.menu::before {
+		content: "";
+		position: fixed;
+		width: 100%;
+		height: 70px;
+		top: 0;
+		left: 0;
+		transition: left 0.3s;
+		background-color: #fff;
+		z-index: 2;
+
+
+	}
+
+	.menu__list {
+		flex-direction: column;
+		row-gap: 30px;
+	}
+
+	.menu__link {
+
+		font-size: 28px;
+	}
+
+	[data-menu-open] body {
+		overflow: hidden;
+	}
+
+	[data-menu-open] .icon-menu span {
+		width: 0;
+	}
+
+	[data-menu-open] .icon-menu::before {
+		rotate: -45deg;
+		translate: 0 -50%;
+		top: 50%;
+	}
+
+	[data-menu-open] .icon-menu::after {
+		rotate: 45deg;
+		translate: 0 50%;
+		bottom: 50%;
+	}
+
+	[data-menu-open] .menu,
+	[data-menu-open] .menu::before {
+		left: 0;
+		z-index: 3;
+
+	}
+}
+
+/* -----------------------------480----------------------------- */
+@media (width < 480px) {
+	.header__container {
+		padding-top: 20px;
+
+	}
+}
+
+/* /////////Header /////// */
+
+/* section-1 uniting*/
+
+
+.uniting__container {
+
+	display: flex;
+	justify-content: space-between;
+	gap: 27px;
+
+	padding-top: 83px;
+	padding-bottom: 69px;
+}
+
+.uniting__title {
+	color: #ba936f;
+	font-size: 50px;
+	font-family: "Lora", serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 70px;
+	padding-top: 71px;
+}
+
+.uniting__text {
+	color: #343434;
+	font-size: 19px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	line-height: 1.42;
+	margin-bottom: 59px;
+}
+
+.uniting__link span {
+	position: relative;
+	left: -45px;
+	color: #343434;
+	font-size: 17px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+.uniting__link:hover span {
+	color: #ba936f;
+	text-decoration: underline;
+	transition: all 0.5s;
+}
+
+.uniting__img {
+	min-width: 484px;
+}
+
+img {
+	border-radius: 35px;
+}
+
+/* media____________ */
+
+/* --------------------------1200------------------------------------ */
+@media (width <=1200px) {
+	.uniting__container {
+		padding-bottom: 50px;
+		gap: 20px;
+	}
+
+	.uniting__img {
+		min-width: 400px;
+	}
+
+	.uniting__title {
+
+		margin-bottom: 50px;
+		padding-top: 0;
+	}
+
+	.uniting__text {
+
+		margin-bottom: 30px;
+	}
+}
+
+/* --------------------------922---------------------------------- */
+@media (width <=922px) {
+	.uniting__title {
+		font-size: 30px;
+		margin-bottom: 50px;
+	}
+
+	.uniting__text {
+		margin-bottom: 25px;
+	}
+}
+
+/* ------------------------------768----------------------------- */
+@media (width < 768px) {
+	.uniting__container {
+		padding-bottom: 30px;
+
+	}
+
+	.uniting__container {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.uniting__content {
+		text-align: center;
+	}
+}
+
+/* -----------------------------480----------------------------- */
+@media (width < 480px) {
+	.uniting__img {
+		min-width: 100%;
+	}
+}
+
+/* //////section-1 uniting/////////*/
+
+
+/* section-2  practice */
+
+.practice__container {
+	padding-top: 69px;
+	padding-bottom: 69px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 40px;
+}
+
+.practice__img {
+	min-width: 600px;
+}
+
+.practice__content {
+	padding-top: 63px;
+}
+
+.practice__title {
+	color: #ba936f;
+	font-size: 35px;
+	text-align: left;
+	font-family: "Lora", serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 55px;
+}
+
+.practice__text {
+	color: #343434;
+	font-size: 19px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	line-height: 1.42;
+	margin-bottom: 43px;
+}
+
+.practice__text a {
+	color: #ba936f;
+	font-weight: 600;
+}
+
+.practice__text a:hover {
+	color: #8d6138;
+	text-decoration: underline;
+	transition: all 0.5s;
+}
+
+
+.practice__text p:first-of-type {
+	/* Додаємо відступ знизу 46px */
+	margin-bottom: 46px;
+}
+
+.button--practice {
+	min-width: 200px;
+}
+
+/* media____________ */
+
+/* --------------------------1200------------------------------------ */
+@media (width <=1200px) {
+
+	.practice__container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		gap: 30px;
+	}
+
+	.practice__img {
+		min-width: 50%;
+	}
+
+
+	.practice__content {
+		padding-top: 0;
+	}
+
+	.practice__title {
+		margin-bottom: 50px;
+		text-align: center;
+
+	}
+
+}
+
+/* --------------------------922---------------------------------- */
+@media (width <=922px) {
+	.practice__container {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		gap: 20px;
+	}
+
+	.practice__title {
+		font-size: 27px;
+		margin-bottom: 20px;
+	}
+
+	.practice__text {
+		margin-bottom: 25px;
+	}
+
+	.practice__text p:first-of-type {
+
+		margin-bottom: 30px;
+	}
+}
+
+/* ------------------------------768----------------------------- */
+@media (width < 768px) {
+	.practice__container {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.practice__content {
+		text-align: center;
+		order: 1;
+	}
+
+	.practice__title {
+		font-size: 25px;
+		margin-bottom: 40px;
+	}
+
+	.practice__img {
+		order: 2;
+	}
+
+	.button--practice {
+		width: 100%;
+	}
+}
+
+/* -----------------------------480----------------------------- */
+@media (width < 480px) {}
+
+/* ////////////section-2  practice//////////// */
+
+
+/* ---------section-3 lesson ------------*/
+.lesson {}
+
+.lesson__container {
+	padding-top: 69px;
+	padding-bottom: 69px;
+}
+
+.lesson__content {
+	margin-bottom: 64px;
+}
+
+.lesson__title {
+	color: #ba936f;
+	font-size: 35px;
+	font-family: "Lora", serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 32px;
+}
+
+.lesson__text {
+	color: #343434;
+	font-size: 17px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+	max-width: 839px;
+}
+
+
+
+.img {
+	display: flex;
+	justify-content: space-between;
+	gap: 41px;
+}
+
+.img__link span {
+	color: #ba936f;
+	font-size: 22px;
+	font-family: "Lora", serif;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+
+.img__link:hover span {
+	color: #8d6138;
+	text-decoration: underline;
+	transition: all 0.5s;
+}
+
+.img__list img {
+	margin-bottom: 14px;
+}
+
+/* media____________ */
+
+/* --------------------------1200------------------------------------ */
+@media (width <=1200px) {
+	.lesson__container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+/* --------------------------922---------------------------------- */
+@media (width <=922px) {
+	.lesson__container {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.lesson__content {
+		margin-bottom: 30px;
+	}
+
+	.lesson__title {
+		font-size: 25px;
+		margin-bottom: 32px;
+		text-align: center;
+	}
+
+	.lesson__text {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.img {
+		gap: 20px;
+
+	}
+}
+
+/* ------------------------------768----------------------------- */
+@media (width < 768px) {
+
+	.lesson__img {
+
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+	}
+
+
+	.img__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		color: inherit;
+	}
+
+	.img__list span {
+		text-align: center;
+	}
+}
+
+/* -----------------------------480----------------------------- */
+@media (width < 480px) {}
+
+/* /////section-3 lesson////// */
+
+
+/* --------section-4 schedule-------- */
+.schedule {}
+
+.schedule__container {
+	padding-top: 69px;
+	padding-bottom: 69px;
+}
+
+.schedule__content {
+	margin-bottom: 41px;
+}
+
+.schedule__title {
+	max-width: 515px;
+	color: #ba936f;
+	font-size: 35px;
+	font-family: "Lora", serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}
+
+.schedule__text {
+	max-width: 839px;
+	color: #343434;
+	font-size: 17px;
+	font-style: normal;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+	padding-bottom: 15px;
+}
+
+.schedule__time {
+	display: flex;
+	gap: 33px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.schedule__table {
+	min-width: 55%;
+}
+
+.table-schedule__content {
+	color: #343434;
+	font-size: 17px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	line-height: 1.58;
+	border-collapse: collapse;
+	width: 100%;
+
+}
+
+.table-schedule {
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.table-schedule__content th,
+.table-schedule__content td {
+	/*  висота рядка */
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	border-top: 2px solid #BA936F;
+	border-bottom: 2px solid #BA936F;
+}
+
+.table-schedule__content tr>td:last-child {
+	text-align: right;
+	padding-left: 10px;
+
+}
+
+.table-schedule__content tr>td:nth-child(2) {
+	text-align: left;
+	padding-left: 10px;
+}
+
+.table-schedule__content img {
+	width: 15px;
+	height: 15px;
+
+	/* Вирівнювання по вертикалі */
+	vertical-align: middle;
+	vertical-align: top;
+	/* притискає до верхнього краю */
+	vertical-align: text-top;
+	/* притискає до верхнього краю шрифту */
+}
+
+.table-schedule__list:hover a {
+	color: #000000;
+	text-decoration: underline;
+	transition: all 0.5s;
+}
+
+
+
+/* Для скрінрідерів приховуєм */
+.table-schedule__content thead {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+
+/* media____________ */
+
+/* --------------------------1200------------------------------------ */
+@media (width <=1200px) {
+	.schedule__container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.table-schedule__content {
+		font-size: 14px;
+	}
+}
+
+/* --------------------------922---------------------------------- */
+@media (width <=922px) {
+	.schedule__container {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+
+	.schedule__title {
+		max-width: 100%;
+		font-size: 25px;
+		text-align: center;
+	}
+
+	.schedule__text {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.schedule__time {
+		gap: 20px;
+	}
+
+	.table-schedule__content {
+		font-size: 12px;
+	}
+
+	.table-schedule__content img {
+		display: none;
+	}
+
+	.table-schedule__content th,
+	.table-schedule__content td {
+		/*  висота рядка */
+		padding-top: 13px;
+		padding-bottom: 13px;
+
+	}
+}
+
+/* ------------------------------768----------------------------- */
+@media (width < 768px) {
+	.schedule__time {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 15px;
+		align-items: center;
+	}
+
+
+}
+
+/* -----------------------------480----------------------------- */
+@media (width < 480px) {
+	.table-schedule__content {
+		font-size: 10px;
+	}
+
+}
+
+/*///////// section-4 schedule//////// */
+
+footer {
+	text-align: center;
+	color: brown;
+}
